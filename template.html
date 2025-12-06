@@ -171,24 +171,7 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 
 // Your fixed path prefix required by Hack Club Spaces
-const HACKCLUB_PATH_SUFFIX = "/s/ppc_official_website/";
 
-/**
- * Constructs the correct absolute URL required by Hack Club Spaces 
- * by combining the site's root URL and the required path prefix.
- * @param {string} filename The target filename (e.g., "projects.html").
- * @returns {string} The fully qualified absolute URL.
- */
-function constructHackClubPath(filename) {
-    const rootUrl = window.location.origin; // Gets "https://domain.com"
-    
-    // Ignore internal anchor links (like #about)
-    if (filename.startsWith('#')) {
-        return filename;
-    }
-    // Returns: https://[current-domain]/s/ppc_official_website/filename.html
-    return rootUrl + HACKCLUB_PATH_SUFFIX + filename;
-}
 
 // USAGE: Dynamically set the correct path for all internal links on page load
 document.addEventListener('DOMContentLoaded', () => {

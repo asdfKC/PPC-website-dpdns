@@ -178,12 +178,7 @@ nav {
 </div>
 
 <script>
-const HACKCLUB_PATH_SUFFIX = "/s/ppc_official_website/";
 
-function constructHackClubPath(filename) {
-    const rootUrl = window.location.origin;
-    return rootUrl + HACKCLUB_PATH_SUFFIX + filename;
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href]').forEach(link => {
